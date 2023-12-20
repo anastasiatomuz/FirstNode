@@ -1,0 +1,42 @@
+<!-- 
+Anastasia Tomuz
+Mr. Irimina
+Web Dev Pd 3-4 Even 
+September 27 2023 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Dice</title>
+    <script async>
+        const button = document.getElementById("roll_dice");
+        console.log(button == null);
+        button.addEventListener("click", rollDice);
+
+        // function that rolls two dice by creating two random numbers and putting them onto paragraphs on the page
+
+        function rollDice(){
+            die1 = Math.floor(Math.random() * 6) + 1;
+            die2 = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("para_dice_1").innerHTML = "Value of Dice #1: " + die1;
+            document.getElementById("para_dice_2").innerHTML = "Value of Dice #2: " + die2;
+            document.getElementById("para_total").innerHTML = "Dice total: " + (die1 + die2);
+        }
+    </script>
+</head>
+<body>
+    
+    <!--A button to click in order to roll Dice
+    Three paragraphs:
+    One to display Value of first Dice
+    second to display value of second Dice
+    third to display the total value of the dice -->
+
+    <button id="roll_dice">Click here to roll dice</button>
+    <p id="para_dice_1">Value of Dice #1: <em>Must roll dice first</em></p>
+    <p id="para_dice_2">Value of Dice #2: <em>Must roll dice first</em></p>
+    <p id="para_total">Total of dice: <em>Must roll dice first</em></p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "test_anastasia",
+  "version": "1.0.0",
+  "description": "This is a demo for learning how to set up a server for my application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anastasia T",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
