@@ -1,0 +1,24 @@
+steps to set up a server using index.js
+
+using powershell or terminal in vscode,
+1. go to the path of the project folder
+2. check if node and npm is installed (node -v and npm -v)
+3. npm init
+4. npm install express
+5. node index.js
+6. open server and type http://localhost:3000/ 
+
+
+//note: must have folder called public with html/js in it
+----------------------------------------------------------
+//INDEX.JS CODE
+console.log("I will create a server using Express module");
+
+const express = require('express');
+const app = express();
+app.listen(3000, () => console.log('listening at 3000'));
+
+
+app.use(express.static('public'));
+//this serves HTML  web pages
+//this helps serve the web page stored in this folder at localhost:3000
